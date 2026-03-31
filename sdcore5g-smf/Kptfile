@@ -61,6 +61,14 @@ status:
   - reason: Ready
     status: "True"
     type: nephio.org.Specializer.specialize
+  - message: create initial resource
+    reason: req.nephio.org/v1alpha1.Dependency.upf
+    status: "True"
+    type: ref.nephio.org/v1alpha1.Config.smf-core-upf-core
+  - message: create initial resource
+    reason: req.nephio.org/v1alpha1.Dependency.upf
+    status: "True"
+    type: ref.nephio.org/v1alpha1.Config.smf-core-upf-sdcore
   - message: child local resource -> done
     reason: workload.nephio.org/v1alpha1.NFDeployment.smf-core
     status: "True"
@@ -92,11 +100,3 @@ status:
   - message: update done
     status: "True"
     type: workload.nephio.org/v1alpha1.NFDeployment.smf-core
-  - message: create initial resource
-    reason: req.nephio.org/v1alpha1.Dependency.upf
-    status: "True"
-    type: ref.nephio.org/v1alpha1.Config.smf-core-upf-core
-  - message: create initial resource
-    reason: req.nephio.org/v1alpha1.Dependency.upf
-    status: "True"
-    type: ref.nephio.org/v1alpha1.Config.smf-core-upf-sdcore
