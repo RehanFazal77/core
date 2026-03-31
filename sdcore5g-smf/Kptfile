@@ -50,17 +50,16 @@ status:
     status: "True"
     message: injected resource "core" from cluster
     reason: ConfigInjected
-  - message: create initial resource
+  - message: update done
     reason: req.nephio.org/v1alpha1.Interface.n4
-    status: "False"
+    status: "True"
     type: ipam.resource.nephio.org/v1alpha1.IPClaim.smf-core-n4-ipv4
-  - message: create initial resource
+  - message: update done
     reason: req.nephio.org/v1alpha1.Interface.n4
-    status: "False"
+    status: "True"
     type: k8s.cni.cncf.io/v1.NetworkAttachmentDefinition.smf-core-n4
-  - message: not ready
-    reason: Specialize
-    status: "False"
+  - reason: Ready
+    status: "True"
     type: nephio.org.Specializer.specialize
   - message: child local resource -> done
     reason: workload.nephio.org/v1alpha1.NFDeployment.smf-core
@@ -70,26 +69,34 @@ status:
     status: "True"
     type: req.nephio.org/v1alpha1.DataNetwork.internet
     reason: workload.nephio.org/v1alpha1.NFDeployment.smf-core
-  - message: create initial resource condition
+  - message: update done
     reason: workload.nephio.org/v1alpha1.NFDeployment.smf-core
-    status: "False"
+    status: "True"
     type: req.nephio.org/v1alpha1.Dependency.upf
   - message: update done
     status: "True"
     type: req.nephio.org/v1alpha1.Interface.n11
     reason: workload.nephio.org/v1alpha1.NFDeployment.smf-core
-  - message: create initial resource condition
-    status: "False"
+  - message: update done
+    status: "True"
     type: req.nephio.org/v1alpha1.Interface.n4
     reason: workload.nephio.org/v1alpha1.NFDeployment.smf-core
   - message: update done
     status: "True"
     type: req.nephio.org/v1alpha1.Interface.sbi
     reason: workload.nephio.org/v1alpha1.NFDeployment.smf-core
-  - message: create initial resource
+  - message: update done
     reason: req.nephio.org/v1alpha1.Interface.n4
-    status: "False"
+    status: "True"
     type: vlan.resource.nephio.org/v1alpha1.VLANClaim.smf-core-n4
-  - message: update for condition
-    status: "False"
+  - message: update done
+    status: "True"
     type: workload.nephio.org/v1alpha1.NFDeployment.smf-core
+  - message: create initial resource
+    reason: req.nephio.org/v1alpha1.Dependency.upf
+    status: "True"
+    type: ref.nephio.org/v1alpha1.Config.smf-core-upf-core
+  - message: create initial resource
+    reason: req.nephio.org/v1alpha1.Dependency.upf
+    status: "True"
+    type: ref.nephio.org/v1alpha1.Config.smf-core-upf-sdcore
