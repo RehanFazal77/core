@@ -50,13 +50,33 @@ status:
     status: "True"
     message: injected resource "core" from cluster
     reason: ConfigInjected
+  - message: update done
+    reason: req.nephio.org/v1alpha1.Interface.n2
+    status: "True"
+    type: ipam.resource.nephio.org/v1alpha1.IPClaim.amf-core-n2-ipv4
+  - message: update done
+    reason: req.nephio.org/v1alpha1.Interface.n2
+    status: "True"
+    type: k8s.cni.cncf.io/v1.NetworkAttachmentDefinition.amf-core-n2
   - reason: Ready
     status: "True"
     type: nephio.org.Specializer.specialize
+  - message: create initial resource
+    reason: req.nephio.org/v1alpha1.Dependency.upf
+    status: "True"
+    type: ref.nephio.org/v1alpha1.Config.amf-core-upf-sdcore
+  - message: child local resource -> done
+    reason: workload.nephio.org/v1alpha1.NFDeployment.amf-core
+    status: "True"
+    type: req.nephio.org/v1alpha1.Capacity.control-plane
   - message: update done
     status: "True"
     type: req.nephio.org/v1alpha1.DataNetwork.internet
     reason: workload.nephio.org/v1alpha1.NFDeployment.amf-core
+  - message: update done
+    reason: workload.nephio.org/v1alpha1.NFDeployment.amf-core
+    status: "True"
+    type: req.nephio.org/v1alpha1.Dependency.upf
   - message: update done
     status: "True"
     type: req.nephio.org/v1alpha1.Interface.n2
@@ -66,29 +86,9 @@ status:
     type: req.nephio.org/v1alpha1.Interface.sbi
     reason: workload.nephio.org/v1alpha1.NFDeployment.amf-core
   - message: update done
-    status: "True"
-    type: workload.nephio.org/v1alpha1.NFDeployment.amf-core
-  - message: child local resource -> done
-    reason: workload.nephio.org/v1alpha1.NFDeployment.amf-core
-    status: "True"
-    type: req.nephio.org/v1alpha1.Capacity.control-plane
-  - message: update done
-    reason: workload.nephio.org/v1alpha1.NFDeployment.amf-core
-    status: "True"
-    type: req.nephio.org/v1alpha1.Dependency.upf
-  - message: update done
-    reason: req.nephio.org/v1alpha1.Interface.n2
-    status: "True"
-    type: ipam.resource.nephio.org/v1alpha1.IPClaim.amf-core-n2-ipv4
-  - message: update done
-    reason: req.nephio.org/v1alpha1.Interface.n2
-    status: "True"
-    type: k8s.cni.cncf.io/v1.NetworkAttachmentDefinition.amf-core-n2
-  - message: update done
     reason: req.nephio.org/v1alpha1.Interface.n2
     status: "True"
     type: vlan.resource.nephio.org/v1alpha1.VLANClaim.amf-core-n2
-  - message: create initial resource
-    reason: req.nephio.org/v1alpha1.Dependency.upf
+  - message: update done
     status: "True"
-    type: ref.nephio.org/v1alpha1.Config.amf-core-upf-sdcore
+    type: workload.nephio.org/v1alpha1.NFDeployment.amf-core
