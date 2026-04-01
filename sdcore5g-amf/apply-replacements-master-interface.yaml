@@ -1,0 +1,25 @@
+# Replaces the "master" field in AMF NAD's spec.config
+# NAD name follows pattern: amf-<cluster>-<interface>
+# If cluster name changes from "core", update the name below
+apiVersion: fn.kpt.dev/v1alpha1
+kind: ApplyReplacements
+metadata: # kpt-merge: /replace-nad-master-interfaces
+  name: replace-nad-master-interfaces
+  annotations:
+    config.kubernetes.io/local-config: "true"
+    internal.kpt.dev/upstream-identifier: 'fn.kpt.dev|ApplyReplacements|default|replace-nad-master-interfaces'
+replacements:
+# ── AMF: N2 interface ──────────────────────────────────────────────
+- source:
+    kind: ConfigMap
+    name: interface-setters
+    fieldPath: data.n2-interface
+  targets:
+  - select:
+      kind: NetworkAttachmentDefinition
+      name: amf-core-n2
+    fieldPaths:
+    - spec.config
+    options:
+      delimiter: '"master":"'
+      index: 1
