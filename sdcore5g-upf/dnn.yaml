@@ -13,3 +13,8 @@ spec:
   pools:
   - name: pool1
     prefixLength: 24
+status:
+  pools:
+  - name: pool1
+    ipClaim:
+      prefix: 172.6.129.0/24
