@@ -15,4 +15,4 @@ spec:
       nephio.org/network-name: n3
   networkInstance:
     name: vpc-ran
-status: {}
+status: {prefix: 172.3.128.0/17, gateway: ""}
