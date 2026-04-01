@@ -9,5 +9,5 @@ metadata: # kpt-merge: /interface-setters
     internal.kpt.dev/upstream-identifier: '|ConfigMap|default|interface-setters'
 data:
   n3-interface: "eno49" # kpt-set: ${n3-interface}
-  n4-interface: "eno49" # kpt-set: ${n4-interface}
-  n6-interface: "eno49" # kpt-set: ${n6-interface}
+  n4-interface: "eno50" # kpt-set: ${n4-interface}
+  n6-interface: "ens1f0" # kpt-set: ${n6-interface}
