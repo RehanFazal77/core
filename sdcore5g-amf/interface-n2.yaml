@@ -13,3 +13,9 @@ spec:
     name: vpc-ran
   cniType: macvlan
   attachmentType: vlan
+status:
+  ipClaimStatus:
+  - prefix: 172.2.128.0/17
+    gateway: ""
+  vlanClaimStatus:
+    vlanID: 3
