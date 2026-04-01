@@ -31,6 +31,15 @@ info:
   - security
 pipeline:
   mutators:
+  - name: PackageVariant.baseline-core..0
+    image: ghcr.io/kptdev/krm-functions-catalog/apply-setters:v0.2
+    configMap:
+      cluster-name: core
+      cluster-type: workload
+      namespace-prefix: ""
+      site-id: site-core-01
+      storage-class-name: local-path
+      workload-type: core
   - image: ghcr.io/kptdev/krm-functions-catalog/apply-setters:v0.2
     configMap:
       cluster-name: my-ran
