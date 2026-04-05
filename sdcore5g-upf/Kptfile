@@ -52,10 +52,42 @@ status:
     status: "True"
     message: injected resource "core" from cluster
     reason: ConfigInjected
+  - message: update done
+    reason: req.nephio.org/v1alpha1.DataNetwork.internet
+    status: "True"
+    type: ipam.resource.nephio.org/v1alpha1.IPClaim.upf-core-internet-pool1
+  - message: update done
+    reason: req.nephio.org/v1alpha1.Interface.n3
+    status: "True"
+    type: ipam.resource.nephio.org/v1alpha1.IPClaim.upf-core-n3-ipv4
+  - message: update done
+    reason: req.nephio.org/v1alpha1.Interface.n4
+    status: "True"
+    type: ipam.resource.nephio.org/v1alpha1.IPClaim.upf-core-n4-ipv4
+  - message: update done
+    reason: req.nephio.org/v1alpha1.Interface.n6
+    status: "True"
+    type: ipam.resource.nephio.org/v1alpha1.IPClaim.upf-core-n6-ipv4
+  - message: create initial resource
+    reason: req.nephio.org/v1alpha1.Interface.n3
+    status: "False"
+    type: k8s.cni.cncf.io/v1.NetworkAttachmentDefinition.upf-core-n3
+  - message: create initial resource
+    reason: req.nephio.org/v1alpha1.Interface.n4
+    status: "False"
+    type: k8s.cni.cncf.io/v1.NetworkAttachmentDefinition.upf-core-n4
+  - message: create initial resource
+    reason: req.nephio.org/v1alpha1.Interface.n6
+    status: "False"
+    type: k8s.cni.cncf.io/v1.NetworkAttachmentDefinition.upf-core-n6
   - message: not ready
     reason: Specialize
     status: "False"
     type: nephio.org.Specializer.specialize
+  - message: child local resource -> done
+    reason: workload.nephio.org/v1alpha1.NFDeployment.upf-core
+    status: "True"
+    type: req.nephio.org/v1alpha1.Capacity.dataplane
   - message: update done
     status: "True"
     type: req.nephio.org/v1alpha1.DataNetwork.internet
@@ -75,50 +107,18 @@ status:
   - message: update done
     status: "True"
     type: req.nephio.org/v1alpha1.Interface.sbi
-  - message: update for condition
-    status: "False"
-    type: workload.nephio.org/v1alpha1.NFDeployment.upf-core
-  - message: child local resource -> done
-    reason: workload.nephio.org/v1alpha1.NFDeployment.upf-core
-    status: "True"
-    type: req.nephio.org/v1alpha1.Capacity.dataplane
-  - message: update done
-    reason: req.nephio.org/v1alpha1.Interface.n3
-    status: "True"
-    type: ipam.resource.nephio.org/v1alpha1.IPClaim.upf-core-n3-ipv4
-  - message: create initial resource
-    reason: req.nephio.org/v1alpha1.Interface.n3
-    status: "False"
-    type: k8s.cni.cncf.io/v1.NetworkAttachmentDefinition.upf-core-n3
   - message: 'rpc error: code = Unknown desc = db not initialized: { default core    }'
     reason: req.nephio.org/v1alpha1.Interface.n3
     status: "False"
     type: vlan.resource.nephio.org/v1alpha1.VLANClaim.upf-core-n3
-  - message: update done
-    reason: req.nephio.org/v1alpha1.Interface.n4
-    status: "True"
-    type: ipam.resource.nephio.org/v1alpha1.IPClaim.upf-core-n4-ipv4
-  - message: create initial resource
-    reason: req.nephio.org/v1alpha1.Interface.n4
-    status: "False"
-    type: k8s.cni.cncf.io/v1.NetworkAttachmentDefinition.upf-core-n4
   - message: 'rpc error: code = Unknown desc = db not initialized: { default core    }'
     reason: req.nephio.org/v1alpha1.Interface.n4
     status: "False"
     type: vlan.resource.nephio.org/v1alpha1.VLANClaim.upf-core-n4
-  - message: update done
-    reason: req.nephio.org/v1alpha1.Interface.n6
-    status: "True"
-    type: ipam.resource.nephio.org/v1alpha1.IPClaim.upf-core-n6-ipv4
-  - message: create initial resource
-    reason: req.nephio.org/v1alpha1.Interface.n6
-    status: "False"
-    type: k8s.cni.cncf.io/v1.NetworkAttachmentDefinition.upf-core-n6
   - message: 'rpc error: code = Unknown desc = db not initialized: { default core    }'
     reason: req.nephio.org/v1alpha1.Interface.n6
     status: "False"
     type: vlan.resource.nephio.org/v1alpha1.VLANClaim.upf-core-n6
-  - message: update done
-    reason: req.nephio.org/v1alpha1.DataNetwork.internet
-    status: "True"
-    type: ipam.resource.nephio.org/v1alpha1.IPClaim.upf-core-internet-pool1
+  - message: update for condition
+    status: "False"
+    type: workload.nephio.org/v1alpha1.NFDeployment.upf-core
