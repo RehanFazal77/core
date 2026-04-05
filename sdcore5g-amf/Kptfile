@@ -58,9 +58,8 @@ status:
     reason: req.nephio.org/v1alpha1.Interface.n2
     status: "True"
     type: k8s.cni.cncf.io/v1.NetworkAttachmentDefinition.amf-core-n2
-  - message: not ready
-    reason: Specialize
-    status: "False"
+  - reason: Ready
+    status: "True"
     type: nephio.org.Specializer.specialize
   - message: child local resource -> done
     reason: workload.nephio.org/v1alpha1.NFDeployment.amf-core
@@ -70,10 +69,10 @@ status:
     status: "True"
     type: req.nephio.org/v1alpha1.DataNetwork.internet
     reason: workload.nephio.org/v1alpha1.NFDeployment.amf-core
-  - message: create initial resource condition
-    status: "False"
-    type: req.nephio.org/v1alpha1.Dependency.upf
+  - message: update done
     reason: workload.nephio.org/v1alpha1.NFDeployment.amf-core
+    status: "True"
+    type: req.nephio.org/v1alpha1.Dependency.upf
   - message: update done
     status: "True"
     type: req.nephio.org/v1alpha1.Interface.n2
@@ -86,6 +85,10 @@ status:
     reason: req.nephio.org/v1alpha1.Interface.n2
     status: "True"
     type: vlan.resource.nephio.org/v1alpha1.VLANClaim.amf-core-n2
-  - message: update for condition
-    status: "False"
+  - message: update done
+    status: "True"
     type: workload.nephio.org/v1alpha1.NFDeployment.amf-core
+  - message: create initial resource
+    reason: req.nephio.org/v1alpha1.Dependency.upf
+    status: "True"
+    type: ref.nephio.org/v1alpha1.Config.amf-core-upf-core
