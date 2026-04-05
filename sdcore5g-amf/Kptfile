@@ -61,6 +61,10 @@ status:
   - type: nephio.org.Specializer.specialize
     status: "True"
     reason: Ready
+  - type: ref.nephio.org/v1alpha1.Config.amf-core-upf-core
+    status: "True"
+    reason: req.nephio.org/v1alpha1.Dependency.upf
+    message: create initial resource
   - type: req.nephio.org/v1alpha1.Capacity.control-plane
     status: "True"
     reason: workload.nephio.org/v1alpha1.NFDeployment.amf-core
@@ -88,7 +92,3 @@ status:
   - type: workload.nephio.org/v1alpha1.NFDeployment.amf-core
     status: "True"
     message: update done
-  - type: ref.nephio.org/v1alpha1.Config.amf-core-upf-core
-    status: "True"
-    reason: req.nephio.org/v1alpha1.Dependency.upf
-    message: create initial resource
